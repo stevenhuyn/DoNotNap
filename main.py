@@ -1,12 +1,14 @@
 import smtplib
-from auth import *
+from auth import auth, destination
+from email.mime.text import MIMEText as text
 
-# Establish a secure session with gmail's outgoing SMTP server using your gmail account
-server = smtplib.SMTP("smtp.gmail.com", 587)
+m = text("Please Don't")
+m["Subject"] = "Don't Nap Dude"
+
+server = smtplib.SMTP( "smtp.gmail.com", 587 )
 
 server.starttls()
 
-server.login(auth[0], auth[1])
+server.login(auth["Login"], auth["Password"])
 
-# Send text message through SMS gateway of destination number
-server.sendmail(auth[0], auth[0], 'Do Not Nap')
+server.sendmail(auth["Login"], destination, m.as_string())
