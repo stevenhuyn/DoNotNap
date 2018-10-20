@@ -5,7 +5,7 @@ from email.mime.text import MIMEText as text
 m = text("Please Don't")
 m["Subject"] = "Don't Nap Dude"
 
-server = smtplib.SMTP( "smtp.gmail.com", 587 )
+server = smtplib.SMTP("smtp.gmail.com", 587)
 
 server.starttls()
 
