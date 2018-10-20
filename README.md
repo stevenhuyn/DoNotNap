@@ -1,2 +1,2 @@
 # DoNotNap
-Sending texts to my phone so I DO NOT NAP
+Sending messages to myself to reduce naps, the frequency of which is too high for this exam period.
